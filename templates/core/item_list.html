@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for item in items %}
+        <li>{{ item.title }}</li>
+        <li>{{ item.price }}</li>
+    {% empty %}
+        No Item Available!
+    {% endfor %}
+</ul>
+
+{% endblock content %}
